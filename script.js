@@ -72,31 +72,32 @@ toggle.addEventListener('click', () => {
   setTimeout(() => { overlay.classList.remove('active'); document.body.removeChild(overlay); }, 1000);
 });
 
-// --- Responsive Navbar Toggle ---
+// ✅ Responsive Navbar Toggle - FINAL FIXED
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const mobileOverlay = document.querySelector('.mobile-nav-overlay');
 
 navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
   navToggle.classList.toggle('active');
-  navLinks.classList.toggle('open');
   mobileOverlay.classList.toggle('active');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
-// Close menu when overlay is clicked
 mobileOverlay.addEventListener('click', () => {
   navToggle.classList.remove('active');
   navLinks.classList.remove('open');
   mobileOverlay.classList.remove('active');
+  document.body.style.overflow = '';
 });
 
-// Close menu when a link or button is clicked
-navLinks.querySelectorAll('a, button').forEach(item => {
+document.querySelectorAll('.nav-links a, .nav-links button').forEach(item => {
   item.addEventListener('click', () => {
-    if(window.innerWidth <= 850){
+    if (window.innerWidth <= 850) {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
       mobileOverlay.classList.remove('active');
+      document.body.style.overflow = '';
     }
   });
 });

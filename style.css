@@ -306,3 +306,46 @@ footer a:hover { text-decoration:underline; }
   .hero-section p { font-size:1rem;}
   .cta-button { font-size:.95rem; padding:12px 24px;}
 }
+.conversion-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+}
+.dark-mode .conversion-card {
+  background: rgba(32, 36, 54, 0.97);
+  color: #e9eaf0;
+}
+.pitch-highlight {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+.dark-mode .pitch-highlight {
+  color: #62aefb;
+}
+.why-me {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  text-align: left;
+  max-width: 500px;
+  margin-inline: auto;
+}
+.why-me li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.cta-action {
+  margin-bottom: 20px;
+}
+.pricing-note {
+  font-size: 1.05rem;
+  color: #222;
+}
+.dark-mode .pricing-note {
+  color: #bfc2d4;
+}
