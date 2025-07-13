@@ -62,7 +62,7 @@ document.querySelectorAll('.project-card').forEach(el =>
 const toggle = document.getElementById('darkToggle');
 toggle.addEventListener('click', () => {
   const isDark = document.body.classList.toggle('dark-mode');
-  gsap.to('body', { backgroundColor: isDark ? '#121212' : '#f7f9fc', duration: 0.6 });
+  gsap.to('body', { backgroundColor: isDark ? '#181a20' : '#f7f9fc', duration: 0.6 });
   gsap.fromTo(toggle, { rotation: isDark ? 0 : 180 }, { rotation: isDark ? 180 : 0, ease: 'elastic.out(1, 0.5)' });
   toggle.textContent = isDark ? '☀️' : '🌙';
   const overlay = document.createElement('div');
@@ -70,4 +70,33 @@ toggle.addEventListener('click', () => {
   document.body.appendChild(overlay);
   setTimeout(() => overlay.classList.add('active'), 10);
   setTimeout(() => { overlay.classList.remove('active'); document.body.removeChild(overlay); }, 1000);
+});
+
+// --- Responsive Navbar Toggle ---
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('active');
+  navLinks.classList.toggle('open');
+  mobileOverlay.classList.toggle('active');
+});
+
+// Close menu when overlay is clicked
+mobileOverlay.addEventListener('click', () => {
+  navToggle.classList.remove('active');
+  navLinks.classList.remove('open');
+  mobileOverlay.classList.remove('active');
+});
+
+// Close menu when a link or button is clicked
+navLinks.querySelectorAll('a, button').forEach(item => {
+  item.addEventListener('click', () => {
+    if(window.innerWidth <= 850){
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+      mobileOverlay.classList.remove('active');
+    }
+  });
 });

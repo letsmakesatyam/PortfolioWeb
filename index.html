@@ -3,14 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="description" content="Satyam Revgade | Fullstack Developer portfolio with animations, particles, tilt effects, testimonials, and dark mode." />
+  <meta name="description" content="Satyam Revgade | Fullstack Developer portfolio" />
   <title>Satyam Revgade – Fullstack Developer</title>
-
-  <!-- Styles & Icons -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
@@ -20,6 +16,9 @@
 <body>
   <nav class="navbar">
     <div class="logo">SatyamRevgade</div>
+    <button class="nav-toggle" aria-label="Open navigation menu">
+      <span class="hamburger"></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -30,18 +29,19 @@
     </ul>
   </nav>
 
-  <header id="home" class="hero-section reveal-top">
-    <div id="particles-js"></div>
-    <div class="hero-content">
-      <h1><span id="typed-text"></span></h1>
-      <p>Crafting code into beautiful, functional experiences.</p>
-      <div class="cta-wrapper">
-        <a href="#contact" class="cta-button">Let’s Connect</a>
-      </div>
-    </div>
-  </header>
+  <div class="mobile-nav-overlay"></div>
 
   <main>
+    <header id="home" class="hero-section reveal-top">
+      <div id="particles-js"></div>
+      <div class="hero-content">
+        <h1><span id="typed-text"></span></h1>
+        <p>Crafting code into beautiful, functional experiences.</p>
+        <div class="cta-wrapper">
+          <a href="#contact" class="cta-button">Let’s Connect</a>
+        </div>
+      </div>
+    </header>
     <section id="about" class="about-section reveal-left">
       <h2>About Me</h2>
       <img src="https://res.cloudinary.com/dodaz2baz/image/upload/v1722515802/profile_photo_ntji3o.jpg" alt="Satyam Revgade Portrait" loading="lazy" />
@@ -49,7 +49,6 @@
         Hello! I’m <strong>Satyam Revgade</strong>, a passionate fullstack developer dedicated to building clean, responsive, and engaging web applications. I combine a keen eye for design with robust backend logic, ensuring seamless user experiences and scalable solutions. With expertise across the stack, I'm driven to turn ideas into reliable, beautiful products. Let's build something impactful together!
       </p>
     </section>
-
     <section id="skills" class="skills-section">
       <h2 class="reveal-top">Skills</h2>
       <div class="skills-container">
@@ -63,7 +62,6 @@
         <article class="skill reveal-bottom"><span>Git & GitHub</span><div class="bar html"></div></article>
       </div>
     </section>
-
     <section id="projects" class="projects-section">
       <h2 class="reveal-top">Projects</h2>
       <div class="projects-container">
@@ -79,14 +77,12 @@
         </article>
       </div>
     </section>
-
     <section id="testimonials" class="testimonials-section reveal-top">
       <h2>Testimonials</h2>
       <div class="badge">✨ 34 students already got their own version</div>
       <blockquote>"Satyam built my portfolio in under a day—it looks amazing!"<cite>— Amit S.</cite></blockquote>
       <blockquote>"The animations and dark mode are stunning!"<cite>— Priya R.</cite></blockquote>
     </section>
-
     <section id="contact" class="contact-section reveal-right">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/mnqebblg" method="POST">
@@ -97,11 +93,6 @@
         <button type="submit">Send</button>
       </form>
     </section>
-  </main>
-
-  <!-- ... all your previous code ... -->
-
-    <!-- Request Portfolio Section: Place this before the <footer> tag -->
     <section id="request-portfolio" class="reveal-top" style="padding:70px 20px; max-width:700px; margin:auto;">
       <h2>Request Your Portfolio Website</h2>
       <div style="text-align:center; margin-bottom:30px;">
@@ -133,7 +124,7 @@
             <br>
             <button onclick="navigator.clipboard.writeText('satyamrevgade2-1@okhdfcbank')" style="margin-top:5px;padding: 5px 15px; border-radius: 15px; border: none; background: #61dafb; color: #222; cursor: pointer;">Copy UPI ID</button>
           </div>
-          <div style="font-size:0.95rem; color:#d9534f; margin-top:8px;">
+          <div style="font-size:0.95rem; color:#e74c3c; margin-top:8px;">
             Note: UPI Pay Now works only on mobile devices with a UPI app (Google Pay, PhonePe, Paytm, etc.).
           </div>
         </div>
@@ -142,8 +133,7 @@
         <small style="color:#666;">Portfolio packages start at just ₹999!</small>
       </div>
     </section>
-
-<!-- ... then your existing <footer> and rest of code ... -->
+  </main>
   <footer class="reveal-top">
     <div class="socials">
       <a href="https://github.com/letsmakesatyam" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
@@ -153,7 +143,6 @@
     </div>
     <p>© 2025 Satyam Revgade. All Rights Reserved.</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
