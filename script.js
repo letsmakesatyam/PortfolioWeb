@@ -1,4 +1,4 @@
-// ========== Typed.js Animation ==========
+// Typed.js Animation
 const typed = new Typed('#typed-text', {
   strings: [
     "Hi, I'm John Doe",
@@ -14,44 +14,32 @@ const typed = new Typed('#typed-text', {
   cursorChar: '|',
 });
 
-// ========== ScrollReveal Animation ==========
+// ScrollReveal Global Config
 ScrollReveal({
   reset: false,
   distance: '60px',
   duration: 1200,
   delay: 200,
   easing: 'ease-in-out',
+  viewFactor: 0.2,
 });
 
-ScrollReveal().reveal('.hero-section h1, .hero-section p, .cta-button', {
-  origin: 'top',
-  interval: 200
-});
-ScrollReveal().reveal('.about-section', { origin: 'left' });
-ScrollReveal().reveal('.skills-container .skill', {
-  origin: 'bottom',
-  interval: 100
-});
-ScrollReveal().reveal('.projects-container .project-card', {
-  origin: 'bottom',
-  interval: 150
-});
-ScrollReveal().reveal('form', { origin: 'right' });
+// ScrollReveal Classes
+ScrollReveal().reveal('.reveal-top', { origin: 'top', interval: 100 });
+ScrollReveal().reveal('.reveal-left', { origin: 'left', interval: 100 });
+ScrollReveal().reveal('.reveal-right', { origin: 'right', interval: 100 });
+ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', interval: 100 });
 
-// ========== Dark Mode Toggle ==========
+// Dark Mode Toggle
 const toggleButton = document.getElementById('darkToggle');
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
 
-  // Add mind-blowing transition overlay
   const overlay = document.createElement('div');
   overlay.className = 'transition-overlay';
   document.body.appendChild(overlay);
 
-  setTimeout(() => {
-    overlay.classList.add('active');
-  }, 10);
-
+  setTimeout(() => overlay.classList.add('active'), 10);
   setTimeout(() => {
     overlay.classList.remove('active');
     document.body.removeChild(overlay);
