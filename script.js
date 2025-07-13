@@ -21,8 +21,8 @@ particlesJS('particles-js', {
 // Typed.js
 new Typed('#typed-text', {
   strings: [
-    "Hi, I'm John Doe",
-    "Frontend Developer",
+    "Hi, I'm Satyam Revgade",
+    "Fullstack Developer",
     "Creative Web Designer",
     "Pixel-Perfect Coder",
     "UI/UX Dreamer"
