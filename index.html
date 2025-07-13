@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="John Doe | Frontend Developer portfolio with animations, skills, projects, testimonials, and contact." />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="John Doe | Frontend Developer portfolio with animations, particles, tilt effects, testimonials, and dark mode." />
   <title>John Doe – Frontend Developer</title>
+
+  <!-- Styles & Icons -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
@@ -26,9 +30,9 @@
     </ul>
   </nav>
 
-  <header id="home" class="hero-section">
+  <header id="home" class="hero-section reveal-top">
     <div id="particles-js"></div>
-    <div class="hero-content reveal-top">
+    <div class="hero-content">
       <h1><span id="typed-text"></span></h1>
       <p>Crafting code into beautiful, functional experiences.</p>
       <div class="cta-wrapper">
@@ -57,8 +61,16 @@
     <section id="projects" class="projects-section">
       <h2 class="reveal-top">Projects</h2>
       <div class="projects-container">
-        <article class="project-card reveal-bottom" data-tilt><h3>Portfolio Site</h3><p>Responsive & animated portfolio built with HTML, CSS, JS.</p><a href="#">Live</a><a href="#">Code</a></article>
-        <article class="project-card reveal-bottom" data-tilt><h3>Landing Page</h3><p>Stunning landing page for startups and freelancers.</p><a href="#">Live</a><a href="#">Code</a></article>
+        <article class="project-card reveal-bottom" data-tilt>
+          <h3>Portfolio Site</h3>
+          <p>Responsive & animated portfolio built with HTML, CSS, JS.</p>
+          <a href="#">Live</a><a href="#">Code</a>
+        </article>
+        <article class="project-card reveal-bottom" data-tilt>
+          <h3>Landing Page</h3>
+          <p>Stunning landing page for startups and freelancers.</p>
+          <a href="#">Live</a><a href="#">Code</a>
+        </article>
       </div>
     </section>
 
@@ -69,9 +81,9 @@
       <blockquote>"The animations and dark mode are stunning!"<cite>— Priya R.</cite></blockquote>
     </section>
 
-    <section id="contact" class="contact-section">
-      <h2 class="reveal-top">Contact Me</h2>
-      <form class="reveal-right" action="https://formspree.io/f/mnqebblg" method="POST">
+    <section id="contact" class="contact-section reveal-right">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mnqebblg" method="POST">
         <label for="name">Name</label><input id="name" type="text" name="name" required />
         <label for="email">Email</label><input id="email" type="email" name="email" required />
         <label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
@@ -82,9 +94,9 @@
 
   <footer class="reveal-top">
     <div class="socials">
-      <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
     <p>© 2025 John Doe. All Rights Reserved.</p>
   </footer>
