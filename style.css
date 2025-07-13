@@ -174,6 +174,10 @@ h2::after {
   transition: transform 0.3s;
 }
 
+.dark-mode .skill {
+  background: rgba(40, 40, 40, 0.8);
+}
+
 .skill:hover {
   transform: translateY(-5px);
 }
@@ -227,6 +231,11 @@ h2::after {
   transition: transform 0.3s ease;
 }
 
+.dark-mode .project-card {
+  background: rgba(40, 40, 40, 0.9);
+  color: #fff;
+}
+
 .project-card:hover {
   transform: translateY(-6px);
 }
@@ -242,6 +251,10 @@ h2::after {
   font-weight: 500;
 }
 
+.dark-mode .project-card a {
+  color: #61dafb;
+}
+
 /* === Testimonials === */
 .testimonials-section blockquote {
   background: #f2f2f2;
@@ -251,6 +264,12 @@ h2::after {
   max-width: 600px;
   font-style: italic;
   border-radius: 8px;
+  color: #222;
+}
+
+.dark-mode .testimonials-section blockquote {
+  background: rgba(40, 40, 40, 0.9);
+  color: #eee;
 }
 
 .testimonials-section .badge {
@@ -258,6 +277,10 @@ h2::after {
   font-size: 1.1rem;
   color: #444;
   margin-bottom: 20px;
+}
+
+.dark-mode .testimonials-section .badge {
+  color: #ccc;
 }
 
 /* === Contact === */
@@ -275,6 +298,15 @@ input, textarea {
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #222;
+  color: #f0f0f0;
+  border: 1px solid #444;
 }
 
 input:focus, textarea:focus {
@@ -319,7 +351,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* === Transition Overlay (Dark Mode) === */
+/* === Transition Overlay === */
 .transition-overlay {
   position: fixed;
   inset: 0;
