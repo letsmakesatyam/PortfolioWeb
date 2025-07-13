@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="John Doe | Frontend Developer portfolio featuring animated intro, skills, projects, and contact." />
+  <meta name="description" content="John Doe | Frontend Developer portfolio with animations, skills, projects, testimonials, and contact." />
   <title>John Doe – Frontend Developer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
@@ -13,7 +14,7 @@
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <nav class="navbar" role="navigation">
+  <nav class="navbar">
     <div class="logo">JohnDoe</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -30,58 +31,50 @@
     <div class="hero-content reveal-top">
       <h1><span id="typed-text"></span></h1>
       <p>Crafting code into beautiful, functional experiences.</p>
-      <a href="#contact" class="cta-button">Let’s Connect</a>
+      <div class="cta-wrapper">
+        <a href="#contact" class="cta-button">Let’s Connect</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id="about" class="about-section reveal-left" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Me</h2>
-      <img src="https://via.placeholder.com/150" alt="John Doe's Portrait" loading="lazy" />
+    <section id="about" class="about-section reveal-left">
+      <h2>About Me</h2>
+      <img src="https://via.placeholder.com/150" alt="John Doe Portrait" loading="lazy" />
       <p>Hello! I’m <strong>John Doe</strong>, a frontend developer passionate about clean design and smooth experiences. Let's build the web better together.</p>
     </section>
 
     <section id="skills" class="skills-section">
       <h2 class="reveal-top">Skills</h2>
       <div class="skills-container">
-        <article class="skill reveal-bottom" tabindex="0"><span>HTML</span><div class="bar html"></div></article>
-        <article class="skill reveal-bottom" tabindex="0"><span>CSS</span><div class="bar css"></div></article>
-        <article class="skill reveal-bottom" tabindex="0"><span>JavaScript</span><div class="bar js"></div></article>
-        <article class="skill reveal-bottom" tabindex="0"><span>React</span><div class="bar react"></div></article>
+        <article class="skill reveal-bottom"><span>HTML</span><div class="bar html"></div></article>
+        <article class="skill reveal-bottom"><span>CSS</span><div class="bar css"></div></article>
+        <article class="skill reveal-bottom"><span>JavaScript</span><div class="bar js"></div></article>
+        <article class="skill reveal-bottom"><span>React</span><div class="bar react"></div></article>
       </div>
     </section>
 
     <section id="projects" class="projects-section">
       <h2 class="reveal-top">Projects</h2>
       <div class="projects-container">
-        <article class="project-card reveal-bottom" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-          <h3>Portfolio Site</h3>
-          <p>Responsive & animated portfolio built with HTML, CSS, JS.</p>
-          <a href="#">Live</a><a href="#">Code</a>
-        </article>
-        <article class="project-card reveal-bottom" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-          <h3>Landing Page</h3>
-          <p>Stunning landing page for startups and freelancers.</p>
-          <a href="#">Live</a><a href="#">Code</a>
-        </article>
+        <article class="project-card reveal-bottom" data-tilt><h3>Portfolio Site</h3><p>Responsive & animated portfolio built with HTML, CSS, JS.</p><a href="#">Live</a><a href="#">Code</a></article>
+        <article class="project-card reveal-bottom" data-tilt><h3>Landing Page</h3><p>Stunning landing page for startups and freelancers.</p><a href="#">Live</a><a href="#">Code</a></article>
       </div>
     </section>
 
     <section id="testimonials" class="testimonials-section reveal-top">
       <h2>Testimonials</h2>
       <div class="badge">✨ 34 students already got their own version</div>
-      <div class="testimonial-cards">
-        <blockquote>"John built my portfolio in under a day—it looks amazing!"<cite>—Amit S.</cite></blockquote>
-        <blockquote>"The animations and dark mode are stunning!"<cite>—Priya R.</cite></blockquote>
-      </div>
+      <blockquote>"John built my portfolio in under a day—it looks amazing!"<cite>— Amit S.</cite></blockquote>
+      <blockquote>"The animations and dark mode are stunning!"<cite>— Priya R.</cite></blockquote>
     </section>
 
     <section id="contact" class="contact-section">
       <h2 class="reveal-top">Contact Me</h2>
-      <form class="reveal-right" action="https://formspree.io/f/mnqebblg" method="POST" aria-labelledby="contact-heading">
-        <label for="name">Name</label><input id="name" type="text" name="name" placeholder="Your name" required />
-        <label for="email">Email</label><input id="email" type="email" name="email" placeholder="Your email" required />
-        <label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+      <form class="reveal-right" action="https://formspree.io/f/mnqebblg" method="POST">
+        <label for="name">Name</label><input id="name" type="text" name="name" required />
+        <label for="email">Email</label><input id="email" type="email" name="email" required />
+        <label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
         <button type="submit">Send</button>
       </form>
     </section>
@@ -89,9 +82,9 @@
 
   <footer class="reveal-top">
     <div class="socials">
-      <a href="#" aria-label="GitHub">🐱</a>
-      <a href="#" aria-label="LinkedIn">💼</a>
-      <a href="#" aria-label="Instagram">📸</a>
+      <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
     </div>
     <p>© 2025 John Doe. All Rights Reserved.</p>
   </footer>
