@@ -430,3 +430,7 @@ footer a:hover { text-decoration:underline; }
 .transition-overlay.active {
   opacity: 1;
 }
+.dark-mode section.reveal-top {
+  background: linear-gradient(135deg, #181a20, #23263a);
+  color: #e9eaf0;
+}
